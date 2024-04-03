@@ -12,8 +12,7 @@ main {
   --secondary: #31343D;
   --tertiary: #b12704;
   --light: #fafafa;
-  --dark: #799FBA;
-  --darker: #1F3B60;
+  --dark: #786489;
   --alpha: rgba(255,255,255,.7);
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
@@ -37,7 +36,7 @@ body {
   line-height: 1.5;
   font-size: 18px;
   letter-spacing: 0.1em;
-  background: var(--darker);
+  background: var(--dark);
   color: var(--light);
   font-family: 'Open Sans', sans-serif;
 }
@@ -104,6 +103,7 @@ header {
 header a {
   color: var(--light);
 }
+
 
 button {
   font-size: 1rem;
@@ -181,11 +181,7 @@ header h1 {
 header img {
   z-index: 0;
   position: absolute;
-  top: 0;
-  left: 0;
-  height: auto;
-  filter: sepia(1) opacity(60%);
-  opacity: 0.5;
+  
 }
 
 nav {
