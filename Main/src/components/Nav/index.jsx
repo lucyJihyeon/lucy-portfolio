@@ -2,25 +2,27 @@ import { Link } from 'react-router-dom';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 
 function Nav({ currentPage }) {
-  const pages = ['portfolio', 'contact', 'resume'];
+  const pages = ['projects', 'resume', 'contact'];
 
   return (
     <nav>
-      <ul className="flex-row">
+      <ul className="flex-row flex-end">
+        {/* first item = About (current page/landing) */}
         <li
-          className={`mx-5 ${currentPage === '/' && 'navActive'}`}
+          className={`mx-2 ${currentPage === '/' && 'navActive'}`}
           key="about"
         >
           <Link to="/">About</Link>
         </li>
         {pages.map((Page) => (
           <li
-            className={`mx-5 ${currentPage === `/${Page}` && 'navActive'}`}
+            className={`mx-2 ${currentPage === `/${Page}` && 'navActive'}`}
             key={Page}
           >
             <Link to={`/${Page}`}>{capitalizeFirstLetter(Page)}</Link>
           </li>
-        ))}
+          ))
+        }
       </ul>
     </nav>
   );
