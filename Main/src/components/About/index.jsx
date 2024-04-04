@@ -53,14 +53,14 @@ function About() {
           <img
             src={character}
             alt="character"
-            className="character absolute top-0 left-0 z-1 cursor-grab"
+            className="character absolute top-4 left-20 z-1 cursor-grab"
           />
            <img
               src={helloBubble}
               alt="helloBubble"
               className={`hello-bubble ${hovered ? "animate-rotate" : ""}`}
               />
-          <div className="circle relative"></div>
+          <div className="circle left-10 relative"></div>
         </div>
       </div>
       <div className="eclipse"></div>

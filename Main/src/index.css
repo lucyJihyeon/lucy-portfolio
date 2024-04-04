@@ -414,13 +414,13 @@ textarea {
   /* adding rotating effect */
   filter: opacity(0.8);
   /* initial position */
-  transform: rotate(50deg) translateX(-30%) translateY(150%);
+  transform: rotate(50deg) translateX(-5%) translateY(120%);
   transition: all 0.5s;
 }
 
 /* rotating effect after when hovered */
 .animate-rotate {
-  transform: rotate(5deg) translateX(15%) translateY(-10%);
+  transform: rotate(5deg) translateX(40%) translateY(-10%);
 }
 
 /* eclipse class to add layer blur effect */
