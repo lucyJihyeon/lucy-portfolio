@@ -160,12 +160,15 @@ li {
 }
 
 header {
-  height: 200px;
+  height: 150px;
   position: relative;
   overflow: hidden;
   z-index: 2;
 }
 
+.navbar-bg {
+  background-color: var(--dark);
+}
 
 header img {
   z-index: 0;
@@ -176,6 +179,7 @@ nav {
   position: relative;
   font-size: 1.5rem;
   margin: 35px 20px;
+  
 }
 
 nav a:hover {
@@ -413,10 +417,7 @@ textarea {
     margin: 0 10px;
     font-size: 1.5rem;
   }
-  header h1 {
-    display: block;
-    height: 30px;
-  }
+  
 }
 @media only screen and (max-width: 900px) {
   nav {
@@ -426,12 +427,5 @@ textarea {
     margin: 0 10px;
     font-size: 1.5rem;
   }
-  /* header h1 {
-    display: block;
-    margin: 5px 10px;
-    height: 15px;
-    width: 100%;
-    text-align: center;
-    font-size: 2.3rem;
-  } */
+  
 }
