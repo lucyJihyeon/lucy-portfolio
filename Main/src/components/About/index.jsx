@@ -63,6 +63,8 @@ function About() {
           <div className="circle relative"></div>
         </div>
       </div>
+      <div className="eclipse"></div>
+      <div className="eclipse2"></div>
 
       <div className="container my-16 flex flex-row justify-between items-center about-container col-span-12">
         <div className="character-container flex flex-col items-center ml-10">
