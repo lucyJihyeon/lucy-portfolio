@@ -2,17 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-main {
-  margin: 0 auto;
+/* main {
   max-width: 90%;
-  padding: 50px 30px;
-}
+} */
 :root {
   --primary: #8c54ff;
   --secondary: #31343D;
   --tertiary: #b12704;
+
   --light: #fafafa;
   --dark: #786489;
+  --point-color: #EF98A7;
+  --light-point-color: #F8C5B2;
+
   --alpha: rgba(255,255,255,.7);
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
@@ -343,6 +345,47 @@ textarea {
 .project-text a:hover {
   color: var(--darker);
 }
+
+.circle {
+  width: 430px; 
+  height: 400px;
+  background-color: var(--point-color);
+  border-radius: 50%; 
+  top: 8rem;
+  right: 2rem;
+  z-index: -1;
+}
+.character {
+  width: 20rem;
+  height: 35rem;
+  top: -0.3rem;
+}
+
+.about-container {
+  width: 90%;
+  height: max-content;
+  background-color: var(--point-color);
+  border-radius: 20px;
+}
+
+.about-me {
+  position: relative;
+  margin: -2rem 0 1.5rem 0;
+  padding: 0.5rem 1rem;
+}
+.character2 {
+  width: 20rem;
+  height: 20rem;
+}
+
+.sm-container {
+  width: 35rem;
+  background-color: var(--light-point-color);
+  padding:2rem;
+  border-radius: 20px;
+}
+
+
 
 .navActive {
   color: var(--secondary);
