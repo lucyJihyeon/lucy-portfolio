@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* main {
-  max-width: 90%;
-} */
 :root {
   --primary: #8c54ff;
   --secondary: #31343D;
@@ -14,6 +11,9 @@
   --dark: #786489;
   --point-color: #EF98A7;
   --light-point-color: #F8C5B2;
+  --text-color:#4a4949;
+  --gradient-start: #F5DBD1;
+  --gradient-end: #B069F7;
 
   --alpha: rgba(255,255,255,.7);
   --error: rgb(228, 46, 1);
@@ -166,10 +166,6 @@ header {
   z-index: 2;
 }
 
-/* header h1 {
-  position: relative;
-  z-index: 2;
-} */
 
 header img {
   z-index: 0;
@@ -361,6 +357,12 @@ textarea {
   top: -0.3rem;
 }
 
+/* text-span to highlight a word */
+.text-span {
+  color: var(--dark);
+}
+
+/* container for the about section */
 .about-container {
   width: 90%;
   height: max-content;
@@ -368,11 +370,21 @@ textarea {
   border-radius: 20px;
 }
 
+/* about-me font */
 .about-me {
   position: relative;
   margin: -2rem 0 1.5rem 0;
   padding: 0.5rem 1rem;
 }
+
+/* adding gradient to the text */
+.text-gradient {
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end)); 
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  color: transparent;
+}
+
 .character2 {
   width: 20rem;
   height: 20rem;
@@ -380,6 +392,7 @@ textarea {
 
 .sm-container {
   width: 35rem;
+  color: var(--text-color);
   background-color: var(--light-point-color);
   padding:2rem;
   border-radius: 20px;
