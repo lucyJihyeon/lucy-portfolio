@@ -568,7 +568,9 @@ input[type="checkbox"] {
     flex-direction: column;
     justify-content: end;
     align-items: end;
+    z-index: 2;
   }
+  /* display none to make sure to make it visible only when checked */
   nav ul {
     display: none;
     flex-direction: column;
@@ -588,7 +590,19 @@ input[type="checkbox"] {
     padding-right: 2rem;
   }
 
-
-
+  /* hero */
+  .hero .greeting {
+    position: absolute;
+  }
+  .hero img, .hero .circle {
+    margin-left: 13rem;
+  } 
+  
 }
-
+/* 
+.hero {
+  flex-direction: column;
+}
+.hero img, .hero .circle {
+  margin-top: 13rem;
+} */

@@ -23,7 +23,7 @@ function About() {
 
   return (
     <section className="grid items-center my-40">
-      <div className=" container flex-row justify-between items-center mx-10 col-span-12">
+      <div className="hero container flex-row justify-between items-center mx-10 col-span-12">
         <div className="greeting col-span-5 w-50">
           <p className="text-4xl"> Hello, I am</p>
           <div className="text-6xl text-gradient">
