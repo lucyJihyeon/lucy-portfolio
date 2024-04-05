@@ -597,12 +597,78 @@ input[type="checkbox"] {
   .hero img, .hero .circle {
     margin-left: 13rem;
   } 
+}
+
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero img, .hero .circle {
+    margin: 10rem 0 0 0;
+  }
+  .about-container {
+    width: 90%; 
+  }
+  .sm-container {
+    width: 100%; 
+  }
+  .character-container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
+  }
+  .character2 {
+    width: 100%; 
+    max-width: 300px; 
+    margin-top: 20px;  
+  }
+  .about-me {
+    margin: 20px 0; 
+    text-align: center;
+  }
+  /* change the hero image based on the screen size */
+  .hero .character{
+   transform: scale(0.9) translateX(-12%) translateY(8%);
+  } 
+  .circle {
+    transform: scale(0.9) translateX(-9%) translateY(10%);
+  }
+  .hello-bubble {
+    transform: scale(0.9) translateX(-50%) translateY(130%);
+  }
+  .animate-rotate {
+    transform: rotate(5deg) translateX(40%) translateY(30%);
+  }
+}
+
+@media only screen and (max-width:500px){
+  /* change the hero image based on the screen size */
+  .hero .character{
+    transform: scale(0.7) translateX(-30%) translateY(8%);
+   } 
+   .circle {
+     transform: scale(0.7) translateX(-23%) translateY(6%);
+   }
+   .hello-bubble {
+     transform: scale(0.5) translateX(-150%) translateY(210%);
+   }
+   .animate-rotate {
+     transform: scale(0.5) rotate(-10deg) translateX(-100%) translateY(90%);
+   }
+   .about-container {
+    width: 100%;
+    margin: auto 0 auto 1rem;
+    text-align: center;
+   }
+   /* change the footer and eclipse as well to fit the screen  */
+   footer {
+    width: 100vw;
+    margin-left: 5rem;
+   }
+   .eclipse, .eclipse2 {
+    max-width: 100px;
+   }
+  
   
 }
-/* 
-.hero {
-  flex-direction: column;
-}
-.hero img, .hero .circle {
-  margin-top: 13rem;
-} */

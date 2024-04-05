@@ -20,7 +20,7 @@ function Header(props) {
 
   return (
     <header
-      className={`w-screen flex fixed top-0 ${
+      className={`w-full flex fixed top-0 ${
         scrolled ? "navbar-bg" : ""
       }`}
     >
