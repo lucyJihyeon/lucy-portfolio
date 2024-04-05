@@ -6,6 +6,10 @@ function Header(props) {
   // setup the initial scrolled value to 'false'
   const [scrolled, setScrolled] = useState(false);
 
+  const refresh = () => {
+    window.location.reload();
+  }
+
   //updating the scrolled value based on the ertical scroll position of the window.
   useEffect(() => {
     const handleScroll = () => {
@@ -25,8 +29,8 @@ function Header(props) {
       }`}
     >
       {/* container class for responsive  */}
-      <div className="container flex justify-between">
-        <img src={logo} alt="Logo" className="top-7 w-20" />
+      <div className="container flex justify-between cursor-pointer" onClick={refresh}>
+        <img src={logo} alt="Logo" className="top-7 w-20"/>
         {props.children}
       </div>
     </header>
