@@ -25,7 +25,7 @@ function Header(props) {
       }`}
     >
       {/* container class for responsive  */}
-      <div className="container">
+      <div className="container flex justify-between">
         <img src={logo} alt="Logo" className="top-7 w-20" />
         {props.children}
       </div>

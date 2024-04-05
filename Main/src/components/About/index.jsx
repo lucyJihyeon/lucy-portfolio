@@ -34,7 +34,8 @@ function About() {
                   .typeString("Lucy Kwon")
                   .pauseFor(1000)
                   .deleteAll()
-                  .typeString("Full-Stack Developer")
+                  .typeString("Full-Stack<br>")
+                  .typeString(" Developer")
                   .start();
               }}
               // loop indefinitely
@@ -66,7 +67,7 @@ function About() {
       <div className="eclipse"></div>
       <div className="eclipse2"></div>
 
-      <div className="container my-16 flex flex-row justify-between items-center about-container col-span-12">
+      <div className="about-container container mb-16 mt-48 flex flex-row justify-between items-center col-span-12">
         <div className="character-container flex flex-col items-center ml-10">
           <h3 className="about-me"> ABOUT ME</h3>
           <img src={character2} alt="character2" className="character2" />

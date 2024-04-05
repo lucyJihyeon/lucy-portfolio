@@ -15,6 +15,9 @@
   --gradient-start: #f5dbd1;
   --gradient-end: #d94bd4;
   --eclipse-color: #b678ec;
+  --gradient-start-nav: #f8c5b2c8;
+  --gradient-end-nav: #786489d5;
+
 
   --alpha: rgba(255, 255, 255, 0.7);
   --error: rgb(228, 46, 1);
@@ -178,6 +181,7 @@ nav {
   position: relative;
   font-size: 1.5rem;
   margin: 35px 20px;
+  width: 80%;
 }
 
 nav a:hover {
@@ -344,6 +348,11 @@ textarea {
   color: var(--darker);
 }
 
+nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
 /* circle under the character */
 .circle {
   width: 430px;
@@ -452,21 +461,189 @@ textarea {
   cursor: default;
   text-shadow: 3px 3px 15px rgba(255, 255, 255, 0.5);
 }
-@media only screen and (max-width: 1300px) {
-  nav {
-    position: static;
+
+/* Navbar Hamburger's initial styles for larger screens */
+input[type="checkbox"] {
+  display: none;
+}
+.bar {
+  display: none;
+}
+
+.hamburger {
+  position: relative;
+  right: 0;
+  display: flex;
+  justify-content: end;
+}
+/* hamburger menu */
+  input[type="checkbox"] {
+    -webkit-appearance: none;
     display: block;
-    z-index: 100;
-    margin: 0 10px;
-    font-size: 1.5rem;
+    visibility: hidden;
+  }
+
+  .bar {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+  }
+
+  .bar span {
+    position: absolute;
+    width: 45px;
+    height: 7px;
+    background: #f1faee;
+    border-radius: 100px;
+    display: inline-block;
+    transition: 0.3s ease;
+  }
+
+  .bar span.top {
+    top: 0;
+  }
+
+  .bar span.middle {
+    top: 17px;
+  }
+
+  .bar span.bottom {
+    bottom: 0;
+  }
+
+  /* when the user check the hamburger menu */
+  input[type="checkbox"]:checked + .bar .top {
+    transform: rotate(45deg);
+    transform-origin: top left;
+    width: 48px;
+    left: 5px;
+  }
+  
+  input[type="checkbox"]:checked + .bar .bottom {
+    transform: rotate(-45deg);
+    transform-origin: top left;
+    width: 48px;
+    bottom: -1px;
+    box-shadow: 0 0 10px #495057;
+  }
+  
+  input[type="checkbox"]:checked + .bar .middle {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+
+/* change the css rules for any screen size <= 1164px */
+@media only screen and (max-width: 1164px)  {
+  .sm-container {
+    margin:1rem;
+  }
+  .character2 {
+    width: 18rem;
+    height:18rem;
+  }
+  nav li {
+    padding-left: 0;
+    margin: 0;
   }
 }
-@media only screen and (max-width: 900px) {
-  nav {
-    position: static;
-    display: block;
-    z-index: 100;
-    margin: 0 10px;
-    font-size: 1.5rem;
+
+/* Media query for screens up to 1024px */
+@media only screen and (max-width: 1024px) {
+  .about-container {
+    justify-content: center;
   }
+  .sm-container{
+    width: 50%;
+  }
+  .character-container {
+    margin: 0;
+  }
+  /* hamburger menu */
+  input[type = "checkbox"] {
+    -webkit-appearance: none;
+    display: none;
+    visibility: hidden;
+  }
+  
+  .bar {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+  }
+  
+  .bar span {
+    position: absolute;
+    width: 45px;
+    height: 7px;
+    background: #f1faee;
+    border-radius: 100px;
+    display: inline-block;
+    transition: 0.3s ease;
+    left: 0;
+  }
+  
+  .bar span.top {
+    top: 0;
+  }
+  
+  .bar span.middle {
+    top: 17px;
+  }
+  
+  .bar span.bottom {
+    bottom: 0;
+  }
+  /* animation when the hamburger menu is checked */
+  input[type]:checked ~ span.top {
+    transform: rotate(45deg);
+    transform-origin: top left;
+    width: 48px;
+    left: 5px;
+  }
+  
+  input[type]:checked ~ span.bottom {
+    transform: rotate(-45deg);
+    transform-origin: top left;
+    width: 48px;
+    bottom: -1px;
+    box-shadow: 0 0 10px #495057;
+  }
+  
+  input[type]:checked ~ span.middle {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+  /* change the direction to column */
+  nav {
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+  }
+  nav ul {
+    display: none;  
+    width: 50%;
+    margin: 1.5rem;
+    background: linear-gradient(
+      to bottom,
+      var(--gradient-start-nav),
+      var(--gradient-end-nav)
+    );
+    border-radius: 20px;
+  }
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 2rem;
+    padding-right: 2rem;
+  }
+
+
+
 }
+
