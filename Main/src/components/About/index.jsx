@@ -23,7 +23,7 @@ function About() {
 
   return (
     <section className="grid items-center my-40">
-      <div className=" container flex-row justify-between items-center mx-10 col-span-12">
+      <div className="hero container flex-row justify-between items-center mx-10 col-span-12">
         <div className="greeting col-span-5 w-50">
           <p className="text-4xl"> Hello, I am</p>
           <div className="text-6xl text-gradient">
@@ -34,7 +34,8 @@ function About() {
                   .typeString("Lucy Kwon")
                   .pauseFor(1000)
                   .deleteAll()
-                  .typeString("Full-Stack Developer")
+                  .typeString("Full-Stack<br>")
+                  .typeString(" Developer")
                   .start();
               }}
               // loop indefinitely
@@ -53,20 +54,20 @@ function About() {
           <img
             src={character}
             alt="character"
-            className="character absolute top-0 left-0 z-1 cursor-grab"
+            className="character absolute top-4 left-20 z-1 cursor-grab"
           />
            <img
               src={helloBubble}
               alt="helloBubble"
               className={`hello-bubble ${hovered ? "animate-rotate" : ""}`}
               />
-          <div className="circle relative"></div>
+          <div className="circle left-10 relative"></div>
         </div>
       </div>
       <div className="eclipse"></div>
       <div className="eclipse2"></div>
 
-      <div className="container my-16 flex flex-row justify-between items-center about-container col-span-12">
+      <div className="about-container container mb-16 mt-48 flex flex-row justify-between items-center col-span-12">
         <div className="character-container flex flex-col items-center ml-10">
           <h3 className="about-me"> ABOUT ME</h3>
           <img src={character2} alt="character2" className="character2" />

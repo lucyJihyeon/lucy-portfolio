@@ -20,12 +20,12 @@ function Header(props) {
 
   return (
     <header
-      className={`w-screen flex fixed top-0 ${
+      className={`w-full flex fixed top-0 ${
         scrolled ? "navbar-bg" : ""
       }`}
     >
       {/* container class for responsive  */}
-      <div className="container">
+      <div className="container flex justify-between">
         <img src={logo} alt="Logo" className="top-7 w-20" />
         {props.children}
       </div>
