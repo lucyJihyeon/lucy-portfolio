@@ -101,7 +101,7 @@ function Skill() {
             </div>
 
             <div className="carousel-item overflow-y-auto">
-            <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center">
                 {/* showcase which skill */}
                 <div className="flex justify-center flex-col items-center my-10">
                   <p className="mt-2 text-5xl">Back-end</p>
@@ -124,7 +124,7 @@ function Skill() {
             </div>
 
             <div className="carousel-item overflow-y-auto">
-            <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center">
                 {/* showcase which skill */}
                 <div className="flex justify-center flex-col items-center my-10">
                   <p className="mt-2 text-5xl">Dev/Tools</p>
@@ -148,14 +148,34 @@ function Skill() {
           </div>
         </div>
       ) : (
-        // Render horizontal carousel for larger screens
-        <div className="horizontal-carousel">
-          <div className="carousel w-full">
+        // horizontal carousel
+        <div className="flex justify-center items-center h-screen">
+          <div className="carousel container container-color rounded-box h-custom">
             <div id="slide1" className="carousel-item relative w-full">
-              <img
-                src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
-                className="w-full"
-              />
+              <div className="flex flex-col items-center container p-2">
+                {/* showcase which skill */}
+                <div className="flex justify-center flex-col items-center">
+                  <p className="mt-2 text-5xl">Front-end</p>
+                  <p className="mt-2 mb-10 text-5xl">Skills</p>
+                </div>
+                {/* rendering skills icon items */}
+                <div className="flex flex-wrap grid grid-cols-3 gap-3 place-content-around">
+                  {front.map((skill, index) => (
+                    <div key={index} className=" sm:max-w-sm:w-1/5 mx-5">
+                      <div className="container-color sm: w-36 h-full flex-col">
+                        <img
+                          src={skill.path}
+                          alt={skill.name}
+                          className="w-full bg-custom p-2 rounded-full"
+                        />
+                        <p className="text-center m-0">{skill.name}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* buttons */}
               <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                 <a href="#slide4" className="btn btn-circle">
                   ❮
@@ -165,11 +185,32 @@ function Skill() {
                 </a>
               </div>
             </div>
+
+            {/* second slide */}
             <div id="slide2" className="carousel-item relative w-full">
-              <img
-                src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg"
-                className="w-full"
-              />
+              <div className="flex flex-col items-center container p-2">
+                {/* showcase which skill */}
+                <div className="flex justify-center flex-col items-center">
+                  <p className="mt-2 text-5xl">Back-end</p>
+                  <p className="mt-2 mb-10 text-5xl">Skills</p>
+                </div>
+                {/* rendering skills icon items */}
+                <div className="flex flex-wrap grid grid-cols-4 gap-3 place-content-around">
+                  {back.map((skill, index) => (
+                    <div key={index} className=" sm:max-w-sm:w-1/5 mx-5">
+                      <div className="container-color sm: w-36 h-full flex-col">
+                        <img
+                          src={skill.path}
+                          alt={skill.name}
+                          className="w-full bg-custom p-2 rounded-full"
+                        />
+                        <p className="text-center m-0">{skill.name}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {/* buttons */}
               <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                 <a href="#slide1" className="btn btn-circle">
                   ❮
@@ -179,27 +220,34 @@ function Skill() {
                 </a>
               </div>
             </div>
+
+            {/* third slide */}
             <div id="slide3" className="carousel-item relative w-full">
-              <img
-                src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg"
-                className="w-full"
-              />
+              <div className="flex flex-col items-center container p-2">
+                {/* showcase which skill */}
+                <div className="flex justify-center flex-col items-center">
+                  <p className="mt-2 text-5xl">Dev/Tools</p>
+                  <p className="mt-2 mb-10 text-5xl">Skills</p>
+                </div>
+                {/* rendering skills icon items */}
+                <div className="flex flex-wrap grid grid-cols-3 gap-3 place-content-around">
+                  {devtools.map((skill, index) => (
+                    <div key={index} className=" sm:max-w-sm:w-1/5 mx-5">
+                      <div className="container-color sm: w-36 h-full flex-col">
+                        <img
+                          src={skill.path}
+                          alt={skill.name}
+                          className="w-full bg-custom p-2 rounded-full"
+                        />
+                        <p className="text-center m-0">{skill.name}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                 <a href="#slide2" className="btn btn-circle">
-                  ❮
-                </a>
-                <a href="#slide4" className="btn btn-circle">
-                  ❯
-                </a>
-              </div>
-            </div>
-            <div id="slide4" className="carousel-item relative w-full">
-              <img
-                src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg"
-                className="w-full"
-              />
-              <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide3" className="btn btn-circle">
                   ❮
                 </a>
                 <a href="#slide1" className="btn btn-circle">
