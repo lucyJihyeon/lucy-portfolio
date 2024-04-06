@@ -3,7 +3,7 @@ import { capitalizeFirstLetter } from "../../utils/helpers";
 import { useState } from "react";
 
 function Nav({ currentPage }) {
-  const pages = ["projects", "resume", "contact"];
+  const pages = ["skills","projects", "resume", "contact"];
   //setting up the initial showNavbar value to be true
   const [showNavbar, setShowNavbar] = useState(false);
 
