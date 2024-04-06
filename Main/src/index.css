@@ -17,7 +17,7 @@
   --eclipse-color: #b678ec;
   --gradient-start-nav: #f8c5b2c8;
   --gradient-end-nav: #786489d5;
-
+  --darker: #53495D;
 
   --alpha: rgba(255, 255, 255, 0.7);
   --error: rgb(228, 46, 1);
@@ -473,6 +473,16 @@ input[type="checkbox"] {
   display: flex;
   justify-content: end;
 }
+/* custom css */
+.container-color {
+  background-color: var(--darker);
+}
+
+/* custom height */
+.h-custom {
+  height: 35rem;
+}
+
 @media only screen and (min-width: 1024px) {
   ul {
     display: block;
@@ -669,6 +679,4 @@ input[type="checkbox"] {
    .eclipse, .eclipse2 {
     max-width: 100px;
    }
-  
-  
 }

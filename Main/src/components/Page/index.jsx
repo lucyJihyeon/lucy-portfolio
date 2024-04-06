@@ -13,8 +13,6 @@ function Page({ currentPage }) {
 
   return (
     <section>
-      <h2>{capitalizeFirstLetter(currentPage)}</h2>
-
       <PageContent>
         <Outlet />
       </PageContent>
