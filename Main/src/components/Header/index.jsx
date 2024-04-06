@@ -8,7 +8,7 @@ function Header(props) {
 
   const refresh = () => {
     window.location.reload();
-  }
+  };
 
   //updating the scrolled value based on the ertical scroll position of the window.
   useEffect(() => {
@@ -24,13 +24,13 @@ function Header(props) {
 
   return (
     <header
-      className={`w-full flex fixed top-0 ${
-        scrolled ? "navbar-bg" : ""
-      }`}
+      className={`w-full flex fixed top-0 ${scrolled ? "navbar-bg" : ""}`}
     >
       {/* container class for responsive  */}
-      <div className="container flex justify-between cursor-pointer" onClick={refresh}>
-        <img src={logo} alt="Logo" className="top-7 w-20"/>
+      <div className="container flex justify-between cursor-pointer">
+        <div onClick={refresh}>
+          <img src={logo} alt="Logo" className="top-7 w-20" />
+        </div>
         {props.children}
       </div>
     </header>
