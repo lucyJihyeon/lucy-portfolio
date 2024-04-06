@@ -16,6 +16,8 @@ function Page({ currentPage }) {
       <PageContent>
         <Outlet />
       </PageContent>
+      <div className="eclipse"></div>
+      <div className="eclipse2"></div>
     </section>
   );
 }
