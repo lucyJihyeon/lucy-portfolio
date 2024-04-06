@@ -477,11 +477,18 @@ input[type="checkbox"] {
 .container-color {
   background-color: var(--darker);
 }
+.bg-custom {
+  background-color: var(--point-color);
+}
+.bg-custom-light {
+  background-color: var(--light-point-color);
+}
 
 /* custom height */
 .h-custom {
   height: 35rem;
 }
+
 
 @media only screen and (min-width: 1024px) {
   ul {

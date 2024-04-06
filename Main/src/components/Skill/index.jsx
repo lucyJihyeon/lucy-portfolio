@@ -57,23 +57,13 @@ function Skill() {
   ];
 
   return (
-    // <div className="carousel carousel-vertical rounded-box flex sm:max-w-sm flex-col items-center m-10 mt-52">
-    //   {front.map((skill, index) => (
-    //     <div key={index} className=" sm:max-w-sm:w-1/3">
-    //       <div className="container-color sm: w-52 carousel-item h-full">
-    //         <img src={skill.path} alt={skill.name} className="w-full" />
-    //         <p className="text-center m-0">{skill.name}</p>
-    //       </div>
-    //     </div>
-    //   ))}
-    // </div>
     <div className="flex justify-center items-center w-full">
       {isSmallScreen ? (
         // Render vertical carousel for small screens
         <div className="vertical-carousel my-44 p-6 container-color rounded-box">
-          <div className="h-custom mb-10 carousel carousel-vertical rounded-box">
+          <div className="h-custom mb-10 p-10 carousel carousel-vertical rounded-box">
             {/* rendering carousel item */}
-            <div className="carousel-item h-full">
+            <div className="carousel-item overflow-y-auto">
               {/* font-awesome icon */}
               <FontAwesomeIcon
                 icon={faSortDown}
@@ -83,24 +73,24 @@ function Skill() {
                   color: "#ffffff",
                   zIndex: "2",
                   position: "absolute",
-                  top: "100%",
+                  top: "85%",
                   left: "70%",
                 }}
               />
-
               <div className="flex flex-col items-center">
-                <div className="flex justify-center flex-col items-center">
+                {/* showcase which skill */}
+                <div className="flex justify-center flex-col items-center h-52">
                   <p className="mt-2 text-5xl">Front-end</p>
                   <p className="mt-2 mb-10 text-5xl">Skills</p>
                 </div>
                 {/* rendering skills icon items */}
                 {front.map((skill, index) => (
-                  <div key={index} className=" sm:max-w-sm:w-1/3">
+                  <div key={index} className=" sm:max-w-sm:w-1/5">
                     <div className="container-color sm: w-36 carousel-item h-full flex-col">
                       <img
                         src={skill.path}
                         alt={skill.name}
-                        className="w-full"
+                        className="w-full bg-custom p-2 rounded-full"
                       />
                       <p className="text-center m-0">{skill.name}</p>
                     </div>
@@ -109,9 +99,51 @@ function Skill() {
               </div>
             </div>
 
-            <div className="carousel-item h-full"></div>
+            <div className="carousel-item overflow-y-auto">
+            <div className="flex flex-col items-center">
+                {/* showcase which skill */}
+                <div className="flex justify-center flex-col items-center my-10">
+                  <p className="mt-2 text-5xl">Back-end</p>
+                  <p className="mt-2 mb-10 text-5xl">Skills</p>
+                </div>
+                {/* rendering skills icon items */}
+                {back.map((skill, index) => (
+                  <div key={index} className=" sm:max-w-sm:w-1/5">
+                    <div className="container-color sm: w-36 carousel-item h-full flex-col">
+                      <img
+                        src={skill.path}
+                        alt={skill.name}
+                        className="w-full bg-custom p-2 rounded-full"
+                      />
+                      <p className="text-center m-0">{skill.name}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-            <div className="carousel-item h-full"></div>
+            <div className="carousel-item overflow-y-auto">
+            <div className="flex flex-col items-center">
+                {/* showcase which skill */}
+                <div className="flex justify-center flex-col items-center my-10">
+                  <p className="mt-2 text-5xl">Dev/Tools</p>
+                  <p className="mt-2 mb-10 text-5xl">Skills</p>
+                </div>
+                {/* rendering skills icon items */}
+                {devtools.map((skill, index) => (
+                  <div key={index} className=" sm:max-w-sm:w-1/5">
+                    <div className="container-color sm: w-36 carousel-item h-full flex-col">
+                      <img
+                        src={skill.path}
+                        alt={skill.name}
+                        className="w-full bg-custom p-2 rounded-full"
+                      />
+                      <p className="text-center m-0">{skill.name}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       ) : (
