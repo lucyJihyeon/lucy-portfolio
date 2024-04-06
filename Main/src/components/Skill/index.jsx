@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSortDown } from '@fortawesome/free-solid-svg-icons';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSortDown } from "@fortawesome/free-solid-svg-icons";
 
 function Skill() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -70,7 +69,7 @@ function Skill() {
     // </div>
     <div className="flex justify-center items-center w-full">
       {isSmallScreen ? (
-        // Render vertical carousel for small screens 
+        // Render vertical carousel for small screens
 
         <div className="vertical-carousel my-44 p-6 container-color rounded-box">
           <div className="flex justify-center flex-col items-center">
@@ -79,7 +78,19 @@ function Skill() {
           </div>
           <div className="h-custom mb-10 carousel carousel-vertical rounded-box">
             <div className="carousel-item h-full">
-            <img src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg" />
+              <img src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg" />
+              <FontAwesomeIcon
+                icon={faSortDown}
+                size="2xl"
+                bounce
+                style={{
+                  color: "#ffffff",
+                  zIndex: "2",
+                  position: "absolute",
+                  top: "100%",
+                  left: "70%",
+                }}
+              />
             </div>
 
             <div className="carousel-item h-full">
