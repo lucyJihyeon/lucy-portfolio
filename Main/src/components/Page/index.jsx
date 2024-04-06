@@ -13,11 +13,11 @@ function Page({ currentPage }) {
 
   return (
     <section>
+      <h2>{capitalizeFirstLetter(currentPage)}</h2>
+
       <PageContent>
         <Outlet />
       </PageContent>
-      <div className="eclipse"></div>
-      <div className="eclipse2"></div>
     </section>
   );
 }

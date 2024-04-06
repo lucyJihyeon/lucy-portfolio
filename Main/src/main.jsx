@@ -6,7 +6,6 @@ import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
-import Skill from './components/Skill';
 import './index.css';
 
 const router = createBrowserRouter([
@@ -31,10 +30,6 @@ const router = createBrowserRouter([
         path: 'resume',
         element: <Resume />,
       },
-      {
-        path: 'skills',
-        element: <Skill />,
-      }
     ],
   },
 ]);

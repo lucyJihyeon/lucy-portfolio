@@ -64,6 +64,8 @@ function About() {
           <div className="circle left-10 relative"></div>
         </div>
       </div>
+      <div className="eclipse"></div>
+      <div className="eclipse2"></div>
 
       <div className="about-container container mb-16 mt-48 flex flex-row justify-between items-center col-span-12">
         <div className="character-container flex flex-col items-center ml-10">
