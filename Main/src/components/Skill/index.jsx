@@ -74,8 +74,8 @@ function Skill() {
                   color: "#ffffff",
                   zIndex: "2",
                   position: "absolute",
-                  top: "85%",
-                  left: "70%",
+                  top: "65%",
+                  left: "65%",
                 }}
               />
               <div className="flex flex-col items-center">
