@@ -54,6 +54,7 @@ function Skill() {
     { path: "../../src/assets/skills/devtools/github.png", name: "Github" },
     { path: "../../src/assets/skills/devtools/heroku.png", name: "Heroku" },
     { path: "../../src/assets/skills/devtools/webpack.png", name: "Webpack" },
+    { path: "../../src/assets/skills/devtools/apollo.png", name: "Apollo" },
   ];
 
   return (
