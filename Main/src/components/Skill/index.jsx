@@ -156,7 +156,7 @@ function Skill() {
                 {/* showcase which skill */}
                 <div className="flex justify-center flex-col items-center">
                   <p className="mt-2 text-5xl">Front-end</p>
-                  <p className="mt-2 mb-10 text-5xl">Skills</p>
+                  <p className="mt-0 mb-10 text-5xl">Skills</p>
                 </div>
                 {/* rendering skills icon items */}
                 <div className="flex flex-wrap grid grid-cols-3 gap-3 place-content-around">
@@ -177,7 +177,7 @@ function Skill() {
 
               {/* buttons */}
               <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide4" className="btn btn-circle">
+                <a href="#slide3" className="btn btn-circle">
                   ❮
                 </a>
                 <a href="#slide2" className="btn btn-circle">
@@ -192,10 +192,10 @@ function Skill() {
                 {/* showcase which skill */}
                 <div className="flex justify-center flex-col items-center">
                   <p className="mt-2 text-5xl">Back-end</p>
-                  <p className="mt-2 mb-10 text-5xl">Skills</p>
+                  <p className="mt-0 mb-10 text-5xl">Skills</p>
                 </div>
                 {/* rendering skills icon items */}
-                <div className="flex flex-wrap grid grid-cols-4 gap-3 place-content-around">
+                <div className="flex flex-wrap grid grid-cols-3 gap-3 place-content-around">
                   {back.map((skill, index) => (
                     <div key={index} className=" sm:max-w-sm:w-1/5 mx-5">
                       <div className="container-color sm: w-36 h-full flex-col">
@@ -227,7 +227,7 @@ function Skill() {
                 {/* showcase which skill */}
                 <div className="flex justify-center flex-col items-center">
                   <p className="mt-2 text-5xl">Dev/Tools</p>
-                  <p className="mt-2 mb-10 text-5xl">Skills</p>
+                  <p className="mt-0 mb-10 text-5xl">Skills</p>
                 </div>
                 {/* rendering skills icon items */}
                 <div className="flex flex-wrap grid grid-cols-3 gap-3 place-content-around">
