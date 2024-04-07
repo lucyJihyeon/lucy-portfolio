@@ -15,23 +15,28 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <Error />,
     children: [
+      // landing page: about
       {
         index: true,
         element: <About />,
       },
       {
-        path: 'portfolio',
+        // /proejcts
+        path: 'projects',
         element: <Portfolio />,
       },
       {
+        // contact
         path: 'contact',
         element: <Contact />,
       },
       {
+        // resume
         path: 'resume',
         element: <Resume />,
       },
       {
+        // skills
         path: 'skills',
         element: <Skill />,
       }
