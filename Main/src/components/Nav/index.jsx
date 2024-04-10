@@ -1,21 +1,29 @@
 import { NavLink } from "react-router-dom";
 import { capitalizeFirstLetter } from "../../utils/helpers";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 function Nav({ currentPage }) {
-  const pages = ["skills","projects", "resume", "contact"];
-  //setting up the initial showNavbar value to be true
+  const pages = ["skills", "projects", "resume", "contact"];
   const [showNavbar, setShowNavbar] = useState(false);
 
-  //function to handle togglenavbar
   const toggleNavbar = () => {
     setShowNavbar(!showNavbar);
+  };
+
+  const variants = {
+    visible: (i) => ({
+      opacity: 1,
+      transition: {
+        delay: i * 0.3,
+      },
+    }),
+    hidden: { opacity: 0 },
   };
 
   return (
     <nav className="fixed flex justify-end">
       <div className="hamburger">
-        {/* hamburger icon */}
         <label className="bar" htmlFor="check">
           <input type="checkbox" id="check" onChange={toggleNavbar} />
           <span className="top"></span>
@@ -23,24 +31,21 @@ function Nav({ currentPage }) {
           <span className="bottom"></span>
         </label>
       </div>
-      {/* Normal navbar for larger screens */}
-      <ul className={showNavbar ? "block" : ""}>
-        {/* first item = About (current page/landing) */}
-        <li
-          className={`mx-2 ${currentPage === "/" && "navActive"}`}
-          key="about"
-        >
+
+      {showNavbar && (
+        <motion.ul initial="hidden" animate="visible" variants={variants} className="block">
+           <motion.li custom={0} variants={variants} key="about" className={`mx-2 ${currentPage === "/" && "navActive"}`} >
           <NavLink to="/">About</NavLink>
-        </li>
-        {pages.map((Page) => (
-          <li
-            className={`mx-2 ${currentPage === `/${Page}` && "navActive"}`}
-            key={Page}
-          >
-            <NavLink to={`/${Page}`}>{capitalizeFirstLetter(Page)}</NavLink>
-          </li>
-        ))}
-      </ul>
+        </motion.li>
+          {pages.map((page, i) => (
+            <motion.li custom={i + 1} variants={variants} key={page} className={`mx-2 ${currentPage === "/" && "navActive"}`}>
+              <NavLink to={`/${page}`}>{capitalizeFirstLetter(page)}</NavLink>
+            </motion.li>
+          ))}
+        </motion.ul>
+      )}
+
+      
     </nav>
   );
 }
