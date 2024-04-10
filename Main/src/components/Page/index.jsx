@@ -14,7 +14,9 @@ function Page({ currentPage }) {
   return (
     <section>
       <PageContent>
-        <Outlet />
+      <div className='grid items-center my-40 justify-center'>
+      <Outlet />
+      </div>
       </PageContent>
       <div className="eclipse"></div>
       <div className="eclipse2"></div>
