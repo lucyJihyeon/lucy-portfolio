@@ -22,7 +22,7 @@ function About() {
   };
 
   return (
-    <section className="grid items-center my-40">
+    <section>
       <div className="hero container flex-row justify-between items-center mx-10 col-span-12">
         <div className="greeting col-span-5 w-50">
           <p className="text-4xl"> Hello, I am</p>
@@ -65,9 +65,9 @@ function About() {
         </div>
       </div>
 
-      <div className="about-container container mb-16 mt-48 flex flex-row justify-between items-center col-span-12">
+      <div className="about-container container mb-16 mt-48 flex max-lg:flex-col justify-between items-center col-span-12">
         <div className="character-container flex flex-col items-center ml-10">
-          <h3 className="about-me"> ABOUT ME</h3>
+          <h3 className="about-me max-lg:mt-20"> ABOUT ME</h3>
           <img src={character2} alt="character2" className="character2" />
         </div>
         <div className="sm-container flex flex-col m-16">
