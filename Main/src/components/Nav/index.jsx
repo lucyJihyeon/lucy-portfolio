@@ -11,6 +11,7 @@ function Nav({ currentPage }) {
     setShowNavbar(!showNavbar);
   };
 
+  // motion variant for transition effect
   const variants = {
     visible: (i) => ({
       opacity: 1,
@@ -31,8 +32,8 @@ function Nav({ currentPage }) {
           <span className="bottom"></span>
         </label>
       </div>
-
-      {showNavbar && (
+    {/* if showNavbar, render the navbar item with motion effect */}
+      {showNavbar ? (
         <motion.ul initial="hidden" animate="visible" variants={variants} className="block">
            <motion.li custom={0} variants={variants} key="about" className={`mx-2 ${currentPage === "/" && "navActive"}`} >
           <NavLink to="/">About</NavLink>
@@ -43,8 +44,26 @@ function Nav({ currentPage }) {
             </motion.li>
           ))}
         </motion.ul>
-      )}
-
+      ) : 
+      // normal navbar for larger screen 
+      <ul>
+        {/* first item = About (current page/landing) */}
+        <li
+          className={`mx-2 ${currentPage === "/" && "navActive"}`}
+          key="about"
+        >
+          <NavLink to="/">About</NavLink>
+        </li>
+        {pages.map((Page) => (
+          <li
+            className={`mx-2 ${currentPage === `/${Page}` && "navActive"}`}
+            key={Page}
+          >
+            <NavLink to={`/${Page}`}>{capitalizeFirstLetter(Page)}</NavLink>
+          </li>
+        ))}
+      </ul>
+      }
       
     </nav>
   );
