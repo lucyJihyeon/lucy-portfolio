@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import Resume from './components/Resume';
 import Skill from './components/Skill';
 import './index.css';
+import { motion } from 'framer-motion';
 
 const router = createBrowserRouter([
   {
